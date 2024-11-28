@@ -1,0 +1,110 @@
+#root {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.todoTitleContainer {
+  border-bottom: 1px solid #696969;
+  width: 100%;
+}
+
+.todoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+  background-color: rgb(201, 201, 201);
+  color: #242424;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px black;
+  width: 100%;
+}
+
+.todoLists {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.todoListsContent:last-child {
+  border-bottom: 1px solid #696969;
+  padding: 1em 0;
+}
+
+.todoTasksContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  align-items: center;
+  background-color: white;
+  transition: ease-in-out 0.2s;
+}
+
+.completed {
+  background-color: #696969;
+  color: white;
+  text-decoration: line-through;
+}
+
+.tasksContent {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.tasksContent p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.tasksBtns {
+  display: flex;
+  gap: 1em;
+}
+
+.tasksBtns button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 4px;
+  transition: ease-in-out  0.2s;
+}
+
+.completeTaskBtn {
+  background-color: rgb(29, 179, 54);
+}
+
+.completeTaskBtn:hover {
+  background-color: rgb(16, 131, 35);
+  cursor: pointer;
+}
+
+.deleteTaskBtn {
+  background-color: rgb(221, 29, 29);
+}
+
+.deleteTaskBtn:hover {
+  background-color: rgb(146, 13, 13);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+  body {
+    width: auto;
+  }
+  .todoTasksContainer {
+    padding: 10px;
+  }
+
+  .tasksContent {
+    text-align: start;
+    max-width: 100px;
+    overflow: scroll;
+  }
+}

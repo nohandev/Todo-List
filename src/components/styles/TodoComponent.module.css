@@ -1,0 +1,34 @@
+.container { 
+  width: 100%;
+  
+}
+
+.todoCreateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em 0;
+  gap: 1em;
+}
+
+.todoCreateContainer input {
+  width: 98.3%;
+}
+
+.todoCreateContainer select {
+  width: 100%;
+}
+
+.todoSubmitBtn {
+  background-color: #242424;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.todoSubmitBtn:hover {
+  cursor: pointer;
+  background-color: #121212;
+}

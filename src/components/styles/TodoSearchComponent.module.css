@@ -1,0 +1,15 @@
+.todoSearchContainer {
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #696969;
+}
+
+.todoSearchContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.todoSearchContent input {
+  width: 100%;
+}

@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import style from './styles/TodoComponent.module.css'
 
-const TodoComponent = ({ addTask, numberAdd }) => {
+const TodoComponent = ({ addTask }) => {
 
   const [taskName, setTaskName] = useState('');
   const [taskCategory, setTaskCategory] = useState('Estudos');
@@ -27,7 +27,7 @@ const TodoComponent = ({ addTask, numberAdd }) => {
         <label>Criar Tarefa: </label>
         <input 
         type="text" 
-        placeholder='Digite sua tarefa!'
+        placeholder='Digite sua tarefa...'
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
         />

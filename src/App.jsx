@@ -1,12 +1,13 @@
 import './App.css'
 import './assets/Fonts.css'
 import TodoComponent from './components/TodoComponent.jsx'
+import TodoSearchComponent from './components/TodoSearchComponent.jsx'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 
   
-function App({}) {
+function App() {
 
   const [tasks, setTasks] = useState([])
 
@@ -16,6 +17,7 @@ function App({}) {
 
   const removeTask = (id) => {
     const newTasks = [...tasks]
+
     const newTasksFiltered = newTasks.filter(todo => todo.id !== id ? todo : null) 
     setTasks(newTasksFiltered)
   };
@@ -26,14 +28,19 @@ function App({}) {
     setTasks(newTask)
   };
 
+  const [valueSearch, setValueSearch] = useState('')
+
 
   return (
     <div className="todoContainer containerMain">
       <div className='todoTitleContainer'>
         <h1>To-Do List</h1>
       </div>
+
+      <TodoSearchComponent valueSearch={valueSearch} setValueSearch={setValueSearch}/>
+
       <div className="todoLists">
-        {tasks.map((todo) =>(
+        {tasks.filter((todo) => todo.text.toLowerCase().includes(valueSearch.toLowerCase())).map((todo) =>(
           <aside className="todoListsContent" key={todo.id}>
             <div className={todo.isCompleted ? 'todoTasksContainer completed' : 'todoTasksContainer pending'}>
               <div className='tasksContent'>
